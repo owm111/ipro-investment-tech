@@ -1,0 +1,4 @@
+depends.mk
+out/*
+!out/.keep
+!out/styles/.keep
