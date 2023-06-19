@@ -23,6 +23,10 @@
 
     packages = self.lib.pkgsForEachDefaults {
       twitterBootstrap = pkgs: sys: pkgs.twitterBootstrap;
+      masonryLayout = pkgs: sys: builtins.fetchurl {
+        url = "https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js";
+        sha256 = "1ljmgpnwapjlzk085j3lk92r7di475yf844k5n6v87vlzkynlz9n";
+      };
     };
 
     devShells = self.lib.pkgsForEachDefaults {

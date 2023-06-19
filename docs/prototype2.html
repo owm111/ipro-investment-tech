@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+	<html lang="en-US">
+		<head>
+			<meta charset="utf8"/>
+			<title>Education Platform Prototype</title>
+			<link rel="stylesheet" href="styles/bootstrap.min.css"/>
+		</head>
+		<body>
+<div class="container">
+	<button class="btn btn-lg btn-danger" onclick="Array.from(document.getElementsByClassName('note')).forEach(e => e.style.display = 'none')">Hide notes</button>
+  <button class="btn btn-lg btn-danger" onclick="Array.from(document.getElementsByClassName('note')).forEach(e => e.style.display = 'block')">Show notes</button>
+
+	<div class="card bg-danger rounded-3 text-white my-3 note">
+  <div class="card-header">Note</div>
+  <div class="card-body"><p class="card-text">Red notes like these document features that have not been implemented into the prototypes yet. These notes will not be visible in the final product.</p></div>
+</div>
+</div>
+<div class="container-fluid"><hr/></div>
+<div class="container">
+	<div class="card bg-danger rounded-3 text-white my-3 note">
+  <div class="card-header">Note</div>
+  <div class="card-body"><p class="card-text">Below is a widget which could be embedded into another application, e.g., an investment platform. It provides a quick summary of the full layout below.</p></div>
+</div>
+	<div class="card my-4" style="max-width: 400px">
+		<div class="card-header">Learn about investing and the stock market</div>
+		<div class="card-body">
+			<h2 class="h4 card-title">News & Lessons for You</h2>
+			<p class="card-text">Recommended news and lessons for you, based on your interests and habits.</p>
+		</div>
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">Lesson 1 <span class="float-end">
+  <a href="#" class="btn btn-sm btn-primary">View now</a>
+  <a href="#" class="btn btn-sm btn-secondary">View later</a>
+</span></li>
+			<li class="list-group-item">News Item 1 <span class="float-end">
+  <a href="#" class="btn btn-sm btn-primary">Read now</a>
+  <a href="#" class="btn btn-sm btn-secondary">Read later</a>
+</span></li> <li class="list-group-item">Lesson 2 <span class="float-end">
+  <a href="#" class="btn btn-sm btn-primary">View now</a>
+  <a href="#" class="btn btn-sm btn-secondary">View later</a>
+</span></li>
+			<li class="list-group-item">Lesson 3 <span class="float-end">
+  <a href="#" class="btn btn-sm btn-primary">View now</a>
+  <a href="#" class="btn btn-sm btn-secondary">View later</a>
+</span></li>
+			<li class="list-group-item">News Item 2 <span class="float-end">
+  <a href="#" class="btn btn-sm btn-primary">Watch now</a>
+  <a href="#" class="btn btn-sm btn-secondary">Watch later</a>
+</span></li>
+			<li class="list-group-item"><a href="#">See more...</a></li>
+		</ul>
+	</div>
+</div>
+<div class="container-fluid"><hr/></div>
+<div class="container">
+	<div class="card bg-danger rounded-3 text-white my-3 note">
+  <div class="card-header">Note</div>
+  <div class="card-body"><p class="card-text">Below is the full interface of the platform. Users could access it directly or via the above embedded interface. There will be other pages for users to adjust their settings, manage integrations, etc.</p></div>
+</div>
+	<div class="p-5 my-4 bg-body-tertiary rounded-4">
+		<div class="container-fluid py-5">
+			<h1 class="display-2">Education Platform</h1>
+		</div>
+	</div>
+	<div class="card bg-danger rounded-3 text-white my-3 note">
+  <div class="card-header">Note</div>
+  <div class="card-body"><p class="card-text">These panels represent news articles, educational videos, and lessons related to the stock market and investing. The platform will personalize what is recommended to each user based on what they have saved for later, their preferences, what they have read in the past, and, if integerated into another application, their investment portfolio. Once finished, the buttons will link to the relevant page where the user can watch the video, view the lesson, listen to the podcast, etc.</p></div>
+</div>
+	<main class="row" data-masonry='{"percentPosition": "true"}'>
+		<div class="col-sm-6 col-lg-4 mb-5"><div class="card">
+  <div class="card-header">Saved for later</div>
+  <div class="card-body">
+    <h3 class="card-title">Lesson 1</h3>
+    <p class="card-text">A brief summary of the lesson. Each lesson may consist of text or a video explaining investing concepts, situations, etc. and a review quiz for users to test their knowledge.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Video (6 minutes)</li>
+    <li class="list-group-item">5 review questions</li>
+    <li class="list-group-item">Relevant to your portfolio</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="btn btn-primary">View now</a>
+    <a href="#" class="btn btn-secondary">View later</a>
+  </div>
+</div></div>
+		<div class="col-sm-6 col-lg-4 mb-5"><div class="card">
+  <div class="card-header">Recommended for you</div>
+  <img class="card-img-top" src="https://placehold.co/1920x1080?text=Header+Image"/>
+  <div class="card-body">
+    <h3 class="card-title">News Item 1</h3>
+    <p class="card-text">A brief summary of the post or the first few sentences from it will go here. These news items will discuss a recent stock market-related event and what it means for investors in simple terms. If integrated into the user&lsquo;s portfolio, also what it means for their specific stocks.</p>
+  </div>
+  <div class="card-body">
+    <a href="#" class="btn btn-primary">Read now</a>
+    <a href="#" class="btn btn-secondary">Read later</a>
+  </div>
+  <div class="card-footer text-body-secondary">4 hours ago</div>
+</div></div>
+		<div class="col-sm-6 col-lg-4 mb-5"><div class="card">
+  <div class="card-header">Recommended for you</div>
+  <div class="card-body">
+    <h3 class="card-title">Lesson 2</h3>
+    <p class="card-text">A brief summary of the lesson. Each lesson may consist of text or a video explaining investing concepts, situations, etc. and a review quiz for users to test their knowledge.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Article (4-minute read)</li>
+    <li class="list-group-item">4 review questions</li>
+    <li class="list-group-item">Relevant to your portfolio</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="btn btn-primary">View now</a>
+    <a href="#" class="btn btn-secondary">View later</a>
+  </div>
+</div></div>
+		<div class="col-sm-6 col-lg-4 mb-5"><div class="card">
+  <div class="card-header">Recommended for you</div>
+  <div class="card-body">
+    <h3 class="card-title">Lesson 3</h3>
+    <p class="card-text">A brief summary of the lesson. Each lesson may consist of text or a video explaining investing concepts, situations, etc. and a review quiz for users to test their knowledge.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Video (10 minutes)</li>
+    <li class="list-group-item">6 review questions</li>
+    <li class="list-group-item">Based on your previous interests</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="btn btn-primary">View now</a>
+    <a href="#" class="btn btn-secondary">View later</a>
+  </div>
+</div></div>
+		<div class="col-sm-6 col-lg-4 mb-5"><div class="card">
+  <div class="card-header">Featured</div>
+  <img class="card-img-top" src="https://placehold.co/1920x1080?text=Header+Image"/>
+  <div class="card-body">
+    <h3 class="card-title">News Item 2</h3>
+    <p class="card-text">A brief summary of the post or the first few sentences from it will go here. These news items will discuss a recent stock market-related event and what it means for investors in simple terms. If integrated into the user&lsquo;s portfolio, also what it means for their specific stocks.</p>
+  </div>
+  <div class="card-body">
+    <a href="#" class="btn btn-primary">Watch now</a>
+    <a href="#" class="btn btn-secondary">Watch later</a>
+  </div>
+  <div class="card-footer text-body-secondary">6 hours ago</div>
+</div></div>
+		<div class="col-sm-6 col-lg-4 mb-5"><div class="card">
+  
+  <img class="card-img-top" src="https://placehold.co/1920x1080?text=Header+Image"/>
+  <div class="card-body">
+    <h3 class="card-title">News Item 3</h3>
+    <p class="card-text">A brief summary of the post or the first few sentences from it will go here. These news items will discuss a recent stock market-related event and what it means for investors in simple terms. If integrated into the user&lsquo;s portfolio, also what it means for their specific stocks.</p>
+  </div>
+  <div class="card-body">
+    <a href="#" class="btn btn-primary">Listen now</a>
+    <a href="#" class="btn btn-secondary">Listen later</a>
+  </div>
+  <div class="card-footer text-body-secondary">2 days ago</div>
+</div></div>
+		<div class="col-sm-6 col-lg-4 mb-5"><div class="card">
+  
+  <div class="card-body">
+    <h3 class="card-title">Lesson 4</h3>
+    <p class="card-text">A brief summary of the lesson. Each lesson may consist of text or a video explaining investing concepts, situations, etc. and a review quiz for users to test their knowledge.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Video (3 minutes)</li>
+    <li class="list-group-item">2 review questions</li>
+    <li class="list-group-item">Popular among similar users</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="btn btn-primary">View now</a>
+    <a href="#" class="btn btn-secondary">View later</a>
+  </div>
+</div></div>
+		<div class="col-sm-6 col-lg-4 mb-5"><div class="card text-center p-3 text-bg-primary">
+  <a class="btn btn-lg btn-outline-light" href="#">See more</a>
+</div></div>
+	</main>
+</div>
+<script src="scripts/masonry.min.js"></script></body></html>
