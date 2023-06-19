@@ -1,5 +1,11 @@
 beginhtml(Education Platform Prototype)
 <div class="container">
+	pthidenotes()
+	ptnote(Red notes like these document features that have not been implemented into the prototypes yet. These notes will not be visible in the final product.)
+</div>
+<div class="container-fluid"><hr/></div>
+<div class="container">
+	ptnote(`Below is a widget which could be embedded into another application, e.g., an investment platform. It provides a quick summary of the full layout below.')
 	<div class="card my-4" style="max-width: 400px">
 		cardheader(Learn about investing and the stock market)
 		<div class="card-body">
@@ -18,11 +24,13 @@ beginhtml(Education Platform Prototype)
 </div>
 <div class="container-fluid"><hr/></div>
 <div class="container">
+	ptnote(`Below is the full interface of the platform. Users could access it directly or via the above embedded interface. There will be other pages for users to adjust their settings, manage integrations, etc.')
 	<div class="p-5 my-4 bg-body-tertiary rounded-4">
 		<div class="container-fluid py-5">
 			<h1 class="display-2">Education Platform</h1>
 		</div>
 	</div>
+	ptnote(`These panels represent news articles, educational videos, and lessons related to the stock market and investing. The platform will personalize what is recommended to each user based on what they have saved for later, their preferences, what they have read in the past, and, if integerated into another application, their investment portfolio. Once finished, the buttons will link to the relevant page where the user can watch the video, view the lesson, listen to the podcast, etc.')
 	<main class="row" data-masonry='{"percentPosition": "true"}'>
 		edulesson(cardheader(Saved for later), Lesson 1, `edulessonleader', `Video (6 minutes)', 5, Relevant to your portfolio)
 		edunews(cardheader(Recommended for you), edunewsimg, News Item 1, `edunewsleader', 4 hours ago, Read)

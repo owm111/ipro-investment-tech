@@ -1,9 +1,17 @@
 beginhtml(Investment Platform Prototype)
+<div class="container">                                                         
+	pthidenotes()
+        ptnote(Red notes like these document features that have not been implemented into the prototypes yet. These notes will not be visible in the final product.)
+</div>                                                                          
+<div class="container-fluid"><hr/></div>
 <div class="container">
+
+	ptnote(`This is the dashboard of the investment platform. There will be other pages for adjusting settings, etc.')
 	<h1 class="display-2">Investment Platform</h1>
 	<div class="row">
 		<div class="col-md mb-5">
 			<h2>Stocks</h2>
+			ptnote(`Below is the list of stocks for the user to select. The "filters" area will let the user search for stocks and hide those that the platform thinks they will not be interested in. When the user clicks the "details" button next a stock, more information about the stock will be shown to the right (large devices) or below (small devices).')
 			<div class="row">
 				<div class="col-sm-2 mb-2">
 					<p class="h4">Filters</p>
@@ -47,6 +55,7 @@ beginhtml(Investment Platform Prototype)
 				</ul>
 			</nav>
 			<hr/>
+			ptnote(`The most requested feature based on our customer discovered was personalized recommendations. Rows in the table above are highlighted based on the platform's recommendations. The colors are explained below.')
 			<div class="card bg-info">
 				<div class="card-header">Key</div>
 				<div class="card-body">
@@ -63,6 +72,7 @@ beginhtml(Investment Platform Prototype)
 		<div class="col-md">
 			<h2>AAAA Corp Details</h2>
 			<img class="img-fluid d-block" src="https://placehold.co/1920x1080?text=Candlestick+Chart"/>
+			ptnote(`This section displays more information about the stock the user has selected than is shown in the table. Below are the buttons that will allow the user to buy or sell the stock. At the bottom is the peronalized report if the stock was recommended to them by the platform, explaining why this stock may interest them or be a good investment.')
 			<div class="row my-3">
 				<div class="col input-group">
 					<span class="input-group-text">#</span>

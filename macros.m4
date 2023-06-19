@@ -11,6 +11,17 @@ define(beginhtml, <!DOCTYPE html>
 		<body>)dnl
 define(endhtml, <script src="scripts/masonry.min.js"></script></body></html>)dnl
 dnl
+dnl General
+dnl
+define(pthidenotes,
+  <button class="btn btn-lg btn-danger" onclick="Array.from(document.getElementsByClassName('note')).forEach(e => e.style.display = 'none')">Hide notes</button>
+  <button class="btn btn-lg btn-danger" onclick="Array.from(document.getElementsByClassName('note')).forEach(e => e.style.display = 'block')">Show notes</button>
+)dnl
+define(ptnote, <div class="card bg-danger rounded-3 text-white my-3 note">
+  <div class="card-header">Note</div>
+  <div class="card-body"><p class="card-text">$1</p></div>
+</div>)dnl
+dnl
 dnl Prototype 1
 dnl
 define(tablerow, <tr class="$1">
