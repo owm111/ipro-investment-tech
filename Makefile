@@ -1,12 +1,15 @@
 include depends.mk
 
+outdir ?= docs
 pages := index.html prototype1.html prototype2.html
 assets := styles/bootstrap.min.css scripts/masonry.min.js
+sitefiles := $(pages:%=$(outdir)/%) $(assets:%=$(outdir)/%)
+sitejunk := $(outdir)/*.html $(outdir)/styles/*.css $(outdir)/scripts/*.js
 
-all: $(pages:%=out/%) $(assets:%=out/%)
+all: $(sitefiles)
 
 clean:
-	$(RM) depends.mk out/*.html out/styles/*.css out/scripts/*.js
+	$(RM) depends.mk $(sitejunk)
 
 .PHONY: all clean
 
@@ -14,16 +17,18 @@ depends.mk: flake.lock
 	nix build '.#masonryLayout' '.#twitterBootstrap' --print-out-paths --no-link \
 		| sed -e '1s/^/masonry := /' -e '2s/^/bootstrap := /' >$@
 
-out/%.html: macros.m4 %.html.m4
+$(outdir)/%.html: macros.m4 %.html.m4
+	mkdir -p $(outdir)
 	m4 $^ >$@
 
-out/%.html: %.html
+$(outdir)/%.html: %.html
+	mkdir -p $(outdir)
 	cp $< $@
 
-out/styles/%: $(bootstrap)/css/%
-	mkdir -p out/styles
+$(outdir)/styles/%: $(bootstrap)/css/%
+	mkdir -p $(outdir)/styles
 	cp $< $@
 
-out/scripts/masonry.min.js: $(masonry)
-	mkdir -p out/scripts
+$(outdir)/scripts/masonry.min.js: $(masonry)
+	mkdir -p $(outdir)/scripts
 	cp $< $@
