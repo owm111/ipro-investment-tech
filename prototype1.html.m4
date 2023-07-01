@@ -1,30 +1,23 @@
-beginhtml(Investment Platform Prototype)
-<div class="container">                                                         
-	pthidenotes()
-        ptnote(Red notes like these document features that have not been implemented into the prototypes yet. These notes will not be visible in the final product.)
-</div>                                                                          
-<div class="container-fluid"><hr/></div>
+beginhtml(TryTrade Dashboard Prototype)
 <div class="container">
 
-	ptnote(`This is the dashboard of the investment platform. There will be other pages for adjusting settings, etc.')
-	<h1 class="display-2">Investment Platform</h1>
+	<h1 class="display-2">TryTrade Dashboard</h1>
 	<div class="row">
 		<div class="col-md mb-5">
 			<h2>Stocks</h2>
-			ptnote(`Below is the list of stocks for the user to select. The "filters" area will let the user search for stocks and hide those that the platform thinks they will not be interested in. When the user clicks the "details" button next a stock, more information about the stock will be shown to the right (large devices) or below (small devices).')
 			<div class="row">
 				<div class="col-sm-2 mb-2">
 					<p class="h4">Filters</p>
 				</div>
 				<div class="col-sm input-group mb-2">
 					<span class="input-group-text">Show...</span>
-					<input type="text" class="form-control" placeholder="Name"/>
+					<input type="text" class="form-control" placeholder="Name" id="search" oninput="set_filter()"/>
 				</div>
 				<div class="col-sm btn-group mb-2">
 					<button class="btn" disabled="disabled">Hide...</button>
-					<button class="btn btn-secondary">Normal</button>
-					<button class="btn btn-success">Buy</button>
-					<button class="btn btn-warning">Sell</button>
+					<a href="javascript:toggle_normal()" class="btn btn-secondary">Normal</a>
+					<a href="javascript:toggle_buy()" class="btn btn-success">Buy</a>
+					<a href="javascript:toggle_sell()" class="btn btn-warning">Sell</a>
 				</div>
 			</div>
 			<table id="stocktable" class="table table-hover table-responsive">
@@ -36,7 +29,7 @@ beginhtml(Investment Platform Prototype)
 						<th class="text-center" scope="col"></th>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody id="tablebody">
 					tablerow(table-success, AAAA, AAAA Corp, 123.45, +6.78)
 					tablerow(, BBBB, BBBB Inc, 56.38, +0.34)
 					tablerow(table-warning, CCCC, CCC Corp, 78.10, -1.44)
@@ -44,18 +37,18 @@ beginhtml(Investment Platform Prototype)
 				</tbody>
 			</table>
 			<nav>
-				<ul class="pagination justify-content-center">
-					paginationlink(disabled, `#', Previous)
-					paginationlink(active, `#', 1)
-					paginationlink(, `#', 2)
-					paginationlink(, `#', 3)
-					paginationlink(, `#', 4)
-					paginationlink(, `#', 5)
-					paginationlink(, `#', Next)
+				<ul id="pager" class="pagination justify-content-center">
+					paginationlink(disabled, `javascript:move_page(-1)', Previous, id="pager-prev")
+					paginationlink(, `javascript:select_page(1)', 1, id="pager-1")
+					paginationlink(, `javascript:select_page(2)', 2, id="pager-2")
+					paginationlink(, `javascript:select_page(3)', 3, id="pager-3")
+					paginationlink(, `javascript:select_page(4)', 4, id="pager-4")
+					paginationlink(, `javascript:select_page(5)', 5, id="pager-5")
+					paginationlink(, `javascript:select_page(6)', 6, id="pager-6")
+					paginationlink(, `javascript:move_page(1)', Next, id="pager-next")
 				</ul>
 			</nav>
 			<hr/>
-			ptnote(`The most requested feature based on our customer discovered was personalized recommendations. Rows in the table above are highlighted based on the platform's recommendations. The colors are explained below.')
 			<div class="card bg-info">
 				<div class="card-header">Key</div>
 				<div class="card-body">
@@ -70,23 +63,24 @@ beginhtml(Investment Platform Prototype)
 			</div>
 		</div>
 		<div class="col-md">
-			<h2>AAAA Corp Details</h2>
+			<h2 id="details-header">AAAA Corp Details</h2>
 			<img class="img-fluid d-block" src="https://placehold.co/1920x1080?text=Candlestick+Chart"/>
-			ptnote(`This section displays more information about the stock the user has selected than is shown in the table. Below are the buttons that will allow the user to buy or sell the stock. At the bottom is the peronalized report if the stock was recommended to them by the platform, explaining why this stock may interest them or be a good investment.')
+			<p id="details-owned">You own 0 shares.</p>
 			<div class="row my-3">
 				<div class="col input-group">
 					<span class="input-group-text">#</span>
-					<input type="text" class="form-control" value="1"/>
+					<input id="details-buyamt" type="text" class="form-control" value="1"/>
 				</div>
 				<div class="col btn-group">
-					<button class="btn btn-secondary">Buy</button>
-					<button class="btn btn-secondary">Sell</button>
+					<a href="javascript:buy(1)" class="btn btn-secondary">Buy</a>
+					<a href="javascript:buy(-1)" class="btn btn-secondary">Sell</a>
 				</div>
 			</div>
 			<h3>Personalized Report</h3>
-			<p class="lead">Based on your previous investments in <strong>CCC Corp</strong>, you may consider investing in AAAA Corp.</p>
-			<p>AAA Corp's stock price is beginning to rise in anticipation of their upcoming product announcement.</p>
+			<p class="lead" id="details-report-headline">Based on your previous investments in <strong>CCC Corp</strong>, you may consider investing in AAAA Corp.</p>
+			<p id="details-report-body">AAA Corp's stock price is beginning to rise in anticipation of their upcoming product announcement.</p>
 		</div>
 	</div>
 </div>
+<script src="scripts/prototype1.js"></script>
 endhtml()

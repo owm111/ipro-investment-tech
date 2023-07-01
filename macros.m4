@@ -33,7 +33,7 @@ define(tablerow, <tr class="$1">
 		<button class="btn btn-primary">Details</button>
 	</div></td>
 </tr>)dnl
-define(paginationlink, <li class="page-item $1">
+define(paginationlink, <li $4 class="page-item $1">
 	<a href="$2" class="page-link">$3</a>
 </li>)dnl
 dnl
