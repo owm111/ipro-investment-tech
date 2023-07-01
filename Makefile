@@ -2,7 +2,7 @@ include depends.mk
 
 outdir ?= docs
 pages := index.html prototype1.html prototype2.html
-assets := styles/bootstrap.min.css scripts/masonry.min.js
+assets := scripts/prototype1.js styles/bootstrap.min.css scripts/masonry.min.js
 sitefiles := $(pages:%=$(outdir)/%) $(assets:%=$(outdir)/%)
 sitejunk := $(outdir)/*.html $(outdir)/styles/*.css $(outdir)/scripts/*.js
 
@@ -23,6 +23,10 @@ $(outdir)/%.html: macros.m4 %.html.m4
 
 $(outdir)/%.html: %.html
 	mkdir -p $(outdir)
+	cp $< $@
+
+$(outdir)/scripts/%.js: %.js
+	mkdir -p $(outdir)/scripts
 	cp $< $@
 
 $(outdir)/styles/%: $(bootstrap)/css/%
